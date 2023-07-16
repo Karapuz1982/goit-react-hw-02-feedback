@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; 
 import FeedbackOptions from './feedbackOptions';
 import Statistics from './Statistics';
 import Section from './Section';
 import Notification from './Notification';
+
+
 
 class FeedbackWidget extends Component {
     state = {
@@ -56,6 +59,12 @@ class FeedbackWidget extends Component {
             </div>
         );
     }
+    static propTypes = {
+   
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  };
 }
 
 
